@@ -3,11 +3,7 @@ import "./App.css";
 
 import JsmpegPlayer from "./components/JsmpegPlayer";
 
-const videoOptions = {
-  poster:
-    "https://cycjimmy.github.io/staticFiles/images/screenshot/big_buck_bunny_640x360.jpg"
-};
-
+const videoOptions = {};
 const videoOverlayOptions = {};
 
 function App() {

@@ -8,17 +8,13 @@ A node/react webserver used to brodcast the surfcam at HCP  Horace Calwell Pier 
 ## Getting Started
 
 ### Dependencies
-* npm i express //For web application
-* npm i node-rtsp-stream //For reading rtsp streams
-* [ffmpeg]https://ffmpeg.org/download.html#build-windows //For reading rtsp streams
-* npm i ws //For opening websockets
-* npm i dotenv --save //For reading .env
-* npm install @cycjimmy/jsmpeg-player --save
+* [ffmpeg]https://ffmpeg.org/download.html#build-windows //For reading rtsp streams might need to switch to ffmpeg-static
 
 ### Installing
 
 * Clone and leave directories as is.
 * You will need the .env file, you can request it from @Matthew Kastl or from IT.
+* npm install to get dependancies
 
 ### Executing program
 
