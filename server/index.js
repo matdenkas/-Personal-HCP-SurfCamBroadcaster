@@ -9,7 +9,6 @@
  * Created at   :   2022-8-22
  */
  
-/** jshint {inline configuration here} */
 
 const express = require('express');
 const Stream = require('node-rtsp-stream');

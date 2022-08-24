@@ -10,9 +10,10 @@ A node/react webserver used to brodcast the surfcam at HCP  Horace Calwell Pier 
 ### Dependencies
 * npm i express //For web application
 * npm i node-rtsp-stream //For reading rtsp streams
-* [ffmpeg](https://ffmpeg.org/download.html) //For reading rtsp streams
+* [ffmpeg]https://ffmpeg.org/download.html#build-windows //For reading rtsp streams
 * npm i ws //For opening websockets
 * npm i dotenv --save //For reading .env
+* npm install @cycjimmy/jsmpeg-player --save
 
 ### Installing
 
