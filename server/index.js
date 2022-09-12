@@ -27,6 +27,7 @@ require('dotenv').config();
 const PORT = process.env.PORT || 3001;
 const STREAM_PORT = process.env.STREAM_PORT || 3002;
 var stream = null;
+var connections = 0;
 
 function startStream(){
     stream = new Stream({
@@ -53,27 +54,24 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
-app.get('/stop', (req, res) => {
-    console.log("Stop command recieved!");
-    stream.stop();
-});
-
-app.get('/start', (req, res) => {
-    console.log("Start command recieved!");
-    startStream();
-});
-
-app.get('/test', (req, res) => {
-    stream.onSocketConnect();
-    //console.log(stream.stream);
-});
-
 io.on('connection', (socket) => {
-    console.log('====MY SOCKET HAS A CONNECTION====');
+    
+    connections++;
+    console.log(`====MY SOCKET HAS A CONNECTION, connections: ${connections} ====`);
+    if(connections > 0 && !stream){
+        startStream();
+    }
+    socket.on("disconnect", (reason) => {
+        
+        connections--;
+        console.log(`====MY SOCKET HAS A DISCONNECTED====\n${reason}\nconnections: ${connections}`);
+        if(connections <= 0 && stream) {
+            stream.stop();
+            stream = null;
+        }
+    });
 });
 
 server.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 });
-
-startStream();
