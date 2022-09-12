@@ -14,13 +14,13 @@ A node/react webserver used to brodcast the surfcam at HCP  Horace Calwell Pier 
 
 * Clone and leave directories as is.
 
-####Backend
+#### Backend
 
 * You will need the .env file, you can request it from @Matthew Kastl or from IT.
 * `npm install` to get dependancies
 * `npm start` (client will need to be built first)
 
-####Frontend
+#### Frontend
 * cd client
 * `npm install` to get dependancies
 * `npm run build`
