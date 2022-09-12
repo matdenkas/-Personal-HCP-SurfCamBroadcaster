@@ -25,20 +25,11 @@ A node/react webserver used to brodcast the surfcam at HCP  Horace Calwell Pier 
 * `npm install` to get dependancies
 * `npm run build`
 
+### Help
 
-
-### Executing program
-
-#### Server
-```
-npm start
-```
-
-#### Client
-```
-cd client
-npm start
-```
+#### Starting front end development server
+* `cd client`
+* `npm start`
 
 ## Authors
 
